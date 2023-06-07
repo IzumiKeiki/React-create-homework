@@ -1,9 +1,11 @@
 import "./App.css";
+import Button from "./components/Button";
 
 function App() {
   return (
     <>
       <h1>Hello World !</h1>
+      <Button />
       <p className="class">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum harum
         corrupti beatae eius ex facere, optio perspiciatis eaque dolores nobis
