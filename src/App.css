@@ -9,3 +9,27 @@ h1 {
 #id {
   color: darkorange;
 }
+
+.header {
+  background-color: aqua;
+}
+
+.sidebar {
+  background-color: blanchedalmond;
+}
+
+.footer {
+  background-color: aquamarine;
+}
+
+.homepage {
+  display: flex;
+}
+
+.main {
+  width: 75%;
+}
+
+.sidebar {
+  width: 25%;
+}
