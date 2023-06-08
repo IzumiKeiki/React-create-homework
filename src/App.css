@@ -14,8 +14,19 @@ h1 {
   background-color: aqua;
 }
 
-.sidebar {
-  background-color: blanchedalmond;
+.header ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: flex-end;
+}
+
+.header ul .nav-link {
+  padding: 0 20px;
+  text-decoration: none;
+}
+
+.header ul .nav-link:hover {
+  font-weight: bold;
 }
 
 .footer {
@@ -31,5 +42,6 @@ h1 {
 }
 
 .sidebar {
+  background-color: blanchedalmond;
   width: 25%;
 }
