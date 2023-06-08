@@ -5,7 +5,7 @@ function Button() {
         <p>Click</p>
       </a>
     </>
-  );
+  )
 }
 
-export default Button;
+export default Button
