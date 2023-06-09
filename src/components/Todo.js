@@ -13,11 +13,16 @@ function Todo() {
     setTodos([...todos, todo]);
   };
 
+  const deleteTask = (index) => {
+    const updatedTodos = todos.filter((_, i) => i !== index);
+    setTodos(updatedTodos);
+  };
+
   return (
     <div className="todo">
       <h2>To do list</h2>
       <Form input={defaultInput} create={createNewTask} />
-      <List tasks={todos} />
+      <List tasks={todos} remove={deleteTask} />
     </div>
   );
 }
