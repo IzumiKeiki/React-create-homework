@@ -90,3 +90,45 @@ h1 {
 .keypad button:active {
   transform: scale(0.95);
 }
+
+.todo {
+  width: 500px;
+  border: 1px solid black;
+  padding: 20px;
+  margin: 30px;
+}
+
+.todo-form {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.todo-form input {
+  flex-grow: 1;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.todo-form button {
+  padding: 5px 10px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.todo-list li {
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+
+.todo-list li button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  font-size: 14px;
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}

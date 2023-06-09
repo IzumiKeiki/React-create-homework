@@ -1,10 +1,12 @@
-import Calculator from "../components/Calculator";
+// import Calculator from "../components/Calculator";
+import Todo from "../components/Todo";
 
 function ApplicationPage() {
   return (
     <div className="app-page">
       <h1>Application Page</h1>
-      <Calculator />
+      <Todo />
+      {/* <Calculator /> */}
     </div>
   );
 }
