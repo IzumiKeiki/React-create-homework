@@ -1,10 +1,8 @@
 function Button() {
   return (
-    <>
-      <a href="#">
-        <p>Click</p>
-      </a>
-    </>
+    <button href="#">
+      <p>Click</p>
+    </button>
   );
 }
 
