@@ -1,16 +1,13 @@
-function List() {
+function List({ tasks }) {
   return (
     <div className="todo-list">
       <ul>
-        <li>
-          Task 1 <button>Delete</button>
-        </li>
-        <li>
-          Task 2 <button>Delete</button>
-        </li>
-        <li>
-          Task 3 <button>Delete</button>
-        </li>
+        {tasks.map((todo, index) => (
+          <li key={index}>
+            {todo}
+            <button>Delete</button>
+          </li>
+        ))}
       </ul>
     </div>
   );
