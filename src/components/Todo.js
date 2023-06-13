@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import Form from "./Todo/Form";
 import List from "./Todo/List";
@@ -7,11 +7,20 @@ function Todo() {
   const defaultInput = "Enter a todo...";
   const defautlTasks = ["task 1", "task 2", "task 3"];
 
-  const storedTodos = JSON.parse(localStorage.getItem("todos"));
+  const [todos, setTodos] = useState(defautlTasks);
 
-  const [todos, setTodos] = useState(storedTodos ? storedTodos : defautlTasks);
+  useEffect(() => {
+    const storedTodos = JSON.parse(localStorage.getItem("todos"));
+    if (storedTodos) {
+      setTodos(storedTodos);
+    }
+    console.log("getItem");
+  }, []);
 
-  localStorage.setItem("todos", JSON.stringify(todos));
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+    console.log("setItem");
+  }, [todos]);
 
   const createNewTask = (todo) => {
     setTodos([...todos, todo]);
