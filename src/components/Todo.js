@@ -7,7 +7,11 @@ function Todo() {
   const defaultInput = "Enter a todo...";
   const defautlTasks = ["task 1", "task 2", "task 3"];
 
-  const [todos, setTodos] = useState(defautlTasks);
+  const storedTodos = JSON.parse(localStorage.getItem("todos"));
+
+  const [todos, setTodos] = useState(storedTodos ? storedTodos : defautlTasks);
+
+  localStorage.setItem("todos", JSON.stringify(todos));
 
   const createNewTask = (todo) => {
     setTodos([...todos, todo]);
