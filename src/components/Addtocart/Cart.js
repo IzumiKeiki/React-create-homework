@@ -1,21 +1,28 @@
+import { useContext } from "react";
+import { CartContext } from "./CartContext";
+
 function Cart() {
+  const { cartItems, removeFromCart, clearCart } = useContext(CartContext);
+
   return (
     <div className="cart">
-      <ul>
-        <li>
-          name
-          <button className="addtocart-btn remove">Remove</button>
-        </li>
-        <li>
-          name
-          <button className="addtocart-btn remove">Remove</button>
-        </li>
-        <li>
-          name
-          <button className="addtocart-btn remove">Remove</button>
-        </li>
-      </ul>
-      <button className="addtocart-btn clear">Clear Cart</button>
+      {cartItems.length === 0 ? (
+        <p>No items in the cart</p>
+      ) : (
+        <ul>
+          {cartItems.map((name, index) => (
+            <li key={index}>
+              {name}
+              <button className="addtocart-btn remove" onClick={() => removeFromCart(index)}>
+                Remove
+              </button>
+            </li>
+          ))}
+          <button className="addtocart-btn clear" onClick={clearCart}>
+            Clear Cart
+          </button>
+        </ul>
+      )}
     </div>
   );
 }
