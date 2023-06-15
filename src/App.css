@@ -160,10 +160,16 @@ h1 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
-  height: 320px;
+  height: 330px;
+  padding: 10px;
+}
+
+.product-list.true {
+  background-color: lightblue;
 }
 
 .product-item {
+  background-color: #fff;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -185,6 +191,10 @@ h1 {
   background-color: #f5f5f5;
   padding: 20px;
   border-radius: 4px;
+}
+
+.cart ul {
+  padding-left: 10px;
 }
 
 .cart li {

@@ -13,7 +13,9 @@ function Cart() {
           {cartItems.map((name, index) => (
             <li key={index}>
               {name}
-              <button className="addtocart-btn remove" onClick={() => removeFromCart(index)}>
+              <button
+                className="addtocart-btn remove"
+                onClick={() => removeFromCart(index)}>
                 Remove
               </button>
             </li>
