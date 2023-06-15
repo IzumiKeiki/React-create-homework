@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { CartContext } from "./CartContext";
 
 function Cart() {
-  const { cartItems, removeFromCart, clearCart } = useContext(CartContext);
+  const { cartItems, dispatch } = useContext(CartContext);
 
   return (
     <div className="cart">
@@ -15,12 +15,16 @@ function Cart() {
               {name}
               <button
                 className="addtocart-btn remove"
-                onClick={() => removeFromCart(index)}>
+                onClick={() =>
+                  dispatch({ type: "REMOVE_FROM_CART", payload: index })
+                }>
                 Remove
               </button>
             </li>
           ))}
-          <button className="addtocart-btn clear" onClick={clearCart}>
+          <button
+            className="addtocart-btn clear"
+            onClick={() => dispatch({ type: "CLEAR_CART" })}>
             Clear Cart
           </button>
         </ul>
