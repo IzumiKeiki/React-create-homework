@@ -15,16 +15,12 @@ function Cart() {
               {name}
               <button
                 className="addtocart-btn remove"
-                onClick={() =>
-                  dispatch({ type: "REMOVE_FROM_CART", payload: index })
-                }>
+                onClick={() => dispatch({ type: "REMOVE_FROM_CART", payload: index })}>
                 Remove
               </button>
             </li>
           ))}
-          <button
-            className="addtocart-btn clear"
-            onClick={() => dispatch({ type: "CLEAR_CART" })}>
+          <button className="addtocart-btn clear" onClick={() => dispatch({ type: "CLEAR_CART" })}>
             Clear Cart
           </button>
         </ul>
@@ -32,5 +28,4 @@ function Cart() {
     </div>
   );
 }
-
 export default Cart;

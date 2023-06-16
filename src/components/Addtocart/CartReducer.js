@@ -16,7 +16,10 @@ export const cartReducer = (state, action) => {
         listColor: state.listColor - 1,
       };
     case "CLEAR_CART":
-      return { cartItems: [], listColor: 0 };
+      return {
+        cartItems: [],
+        listColor: 0,
+      };
     default:
       return state;
   }
