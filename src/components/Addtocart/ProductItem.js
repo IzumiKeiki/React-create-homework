@@ -7,7 +7,7 @@ function ProductItem({ name, link }) {
   return (
     <div className="product-item">
       <p>{name}</p>
-
+      <img src={link} alt={name} />
       <button
         className="addtocart-btn add"
         onClick={() => dispatch({ type: "ADD_TO_CART", payload: name })}>

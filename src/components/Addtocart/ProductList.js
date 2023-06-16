@@ -1,10 +1,12 @@
 import { useContext, useEffect, useState } from "react";
 import { CartContext } from "./CartContext";
 import ProductItem from "./ProductItem";
+import spinnerImage from "./Spinner-2.gif";
 
 function ProductList() {
   const { listColor } = useContext(CartContext);
   const [nameIdImg, setNameIdImg] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const getPokemon = async () => {
@@ -19,12 +21,31 @@ function ProductList() {
     for (let i = 0; i < 3; i++) getPokemon();
   }, []);
 
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, [loading]);
+
   return (
-    <div className={`product-list ${listColor > 3}`}>
-      {nameIdImg.map((item) => (
-        <ProductItem key={item.id} name={item.name} link={item.url} />
-      ))}
-    </div>
+    <>
+      {loading ? (
+        <div className="product-list">
+          <img src={spinnerImage} alt="spinner" />
+        </div>
+      ) : (
+        ""
+      )}
+      <div style={{ display: loading ? "none" : "" }} className={`product-list ${listColor > 3}`}>
+        {nameIdImg.map((item) => (
+          <ProductItem key={item.id} name={item.name} link={item.url} />
+        ))}
+      </div>
+    </>
   );
 }
 
