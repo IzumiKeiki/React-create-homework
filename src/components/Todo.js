@@ -14,12 +14,10 @@ function Todo() {
     if (storedTodos) {
       setTodos(storedTodos);
     }
-    console.log("getItem");
   }, []);
 
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todos));
-    console.log("setItem");
   }, [todos]);
 
   const createNewTask = (todo) => {
