@@ -1,5 +1,4 @@
 import Addtocart from "../components/Addtocart";
-import Button from "../components/Button";
 
 function Main() {
   return (

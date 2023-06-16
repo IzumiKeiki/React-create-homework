@@ -33,13 +33,10 @@ function ProductList() {
 
   return (
     <>
-      {loading ? (
-        <div className="product-list">
-          <img src={spinnerImage} alt="spinner" />
-        </div>
-      ) : (
-        ""
-      )}
+      <div className="product-list" style={{ display: loading ? "" : "none" }}>
+        <img src={spinnerImage} alt="spinner" />
+      </div>
+
       <div style={{ display: loading ? "none" : "" }} className={`product-list ${listColor > 3}`}>
         {nameIdImg.map((item) => (
           <ProductItem key={item.id} name={item.name} link={item.url} />
