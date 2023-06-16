@@ -201,6 +201,10 @@ h1 {
   margin-bottom: 10px;
 }
 
+.cart li span {
+  margin-right: 5px;
+}
+
 .addtocart-btn.remove {
   background-color: #f44336;
   margin-left: 10px;

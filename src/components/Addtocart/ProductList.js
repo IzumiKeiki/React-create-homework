@@ -18,7 +18,7 @@ function ProductList() {
       const newPokemon = { name: data.name, id: data.id, url: data.sprites.front_default };
       setNameIdImg((prevNameIdImg) => [...prevNameIdImg, newPokemon]);
     };
-    for (let i = 0; i < 3; i++) getPokemon();
+    for (let i = 0; i < 5; i++) getPokemon();
   }, []);
 
   useEffect(() => {

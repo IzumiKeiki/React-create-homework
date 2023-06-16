@@ -10,9 +10,10 @@ function Cart() {
         <p>No items in the cart</p>
       ) : (
         <ul>
-          {cartItems.map((name, index) => (
+          {cartItems.map((item, index) => (
             <li key={index}>
-              {name}
+              <span>{item.count}</span>
+              {item.name}
               <button
                 className="addtocart-btn remove"
                 onClick={() => dispatch({ type: "REMOVE_FROM_CART", payload: index })}>
