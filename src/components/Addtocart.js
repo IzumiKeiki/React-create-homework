@@ -7,7 +7,7 @@ function Addtocart() {
   return (
     <CartProvider>
       <div className="addtocart">
-        <h2>Book Store</h2>
+        <h2>Pokemon Store</h2>
         <div className="container">
           <ProductList />
           <Cart />
