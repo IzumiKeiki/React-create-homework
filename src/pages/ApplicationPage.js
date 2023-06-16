@@ -1,6 +1,6 @@
 import Calculator from "../components/Calculator";
 import Todo from "../components/Todo";
-import Addtocart from "../components/Addtocart";
+// import Addtocart from "../components/Addtocart";
 
 function ApplicationPage() {
   return (
@@ -8,7 +8,7 @@ function ApplicationPage() {
       <h1>Application Page</h1>
       <Calculator />
       <Todo />
-      <Addtocart />
+      {/* <Addtocart /> */}
     </div>
   );
 }

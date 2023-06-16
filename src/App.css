@@ -44,6 +44,7 @@ h1 {
 .sidebar {
   background-color: blanchedalmond;
   width: 25%;
+  padding: 20px;
 }
 
 .calculator {
